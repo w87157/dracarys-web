@@ -1,0 +1,25 @@
+.stepCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.stepCircle::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.stepLine {
+  flex: 1; /* 使用 flex 屬性使得長度自動調整 */
+  height: 2px;
+  margin: auto 8px;
+}

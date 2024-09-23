@@ -1,0 +1,861 @@
+// 檔案位置: styles/global.scss
+
+// 變數覆蓋用 (Variable overrides)
+
+// 全站配色 colors
+$primary: #bbaf74;
+$secondary: #605541;
+$success: #bbaf74;
+$danger: #ab0000;
+$dark: #160c0c;
+$light: #ffffff;
+
+// 按鈕圓角邊 button radius
+$border-radius: 0em;
+$border-radius-sm: 0.2em;
+$border-radius-lg: 0.2em;
+
+// Modal 相關
+$modal-content-bg: $dark;
+$modal-content-color: $primary;
+$modal-content-inner-border-radius: 0;
+$modal-content-border-width: 3px;
+$modal-content-border-color: $primary;
+$btn-close-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='56' viewBox='0 0 54 56' fill='none'%3E%3Cg filter='url(%23filter0_d_473_5783)'%3E%3Cg clip-path='url(%23clip0_473_5783)'%3E%3Crect x='2' width='49.4975' height='49.4975' rx='22' fill='%23160C0C'/%3E%3Cline x1='14.7278' y1='12.0212' x2='39.4766' y2='36.7699' stroke='%23BBAF74' stroke-width='8'/%3E%3Cline x1='14.0212' y1='36.7692' x2='38.7699' y2='12.0205' stroke='%23BBAF74' stroke-width='8'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_473_5783' x='0' y='0' width='53.4971' height='55.498' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_473_5783'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_473_5783' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0_473_5783'%3E%3Crect x='2' width='49.4975' height='49.4975' rx='22' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+$btn-close-opacity: 1;
+$btn-close-width: 2em;
+$modal-header-padding-y: 0.5rem;
+
+// tab
+$nav-tabs-link-active-color: $dark;
+$nav-tabs-link-active-bg: $primary;
+$nav-tabs-link-active-border-color: $primary;
+$nav-tabs-link-hover-border-color: $dark;
+
+// border
+$border-color: $primary;
+$body-emphasis-color: $primary;
+$body-bg: transparent;
+$input-color: $primary;
+$input-placeholder-color: $primary;
+$form-check-input-border-radius: 50%;
+$form-check-input-checked-color: $dark;
+
+// font
+$font-family-sans-serif: "DM Serif Display", "Noto Sans TC", serif;
+
+// input:file
+$form-file-button-bg: $primary;
+$form-file-button-hover-bg: $primary;
+$form-file-button-color: $dark;
+
+// pagination
+$pagination-hover-bg: $primary;
+$pagination-hover-color: $dark;
+$pagination-focus-color: $dark;
+$pagination-focus-bg: $primary;
+$pagination-active-bg: transparent;
+$pagination-active-border-color: transparent;
+$pagination-disabled-color: $primary;
+$pagination-disabled-bg: $secondary;
+$pagination-focus-box-shadow: none;
+
+.pagination .page-link:focus span {
+  color: $dark;
+}
+
+.pagination .page-item.disabled .page-link span {
+  color: $primary;
+}
+
+// dropdown
+$dropdown-link-color: $primary;
+$dropdown-link-hover-bg: $primary;
+$dropdown-link-hover-color: $light;
+$dropdown-padding-y: 0;
+$dropdown-link-active-color: $light;
+$dropdown-item-padding-y: 10px;
+
+// accordion
+$accordion-button-bg: $dark;
+$accordion-button-active-bg: $dark;
+$accordion-button-active-color: $primary;
+$accordion-button-color: $primary;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-focus-border-color: $primary;
+$accordion-button-focus-box-shadow: none;
+$accordion-body-padding-y: 0;
+$accordion-body-padding-x: 0;
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 導入所有 bootstrap 樣式
+@import "~bootstrap/scss/bootstrap";
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//中英文字體
+// @import "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+TC:wght@100..900&family=Uncial+Antiqua&display=swap";
+// @import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap";
+
+// 中文
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"),
+    url("./../asset/font/NotoSansTC-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+// 英文
+@font-face {
+  font-family: "DM Serif Display";
+  src: local("DM Serif Display"),
+    url("./../asset/font/DMSerifDisplay-Regular.ttf") format("truetype");
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+img {
+  width: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+// 定義中文字體用
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+  font-family: "DM Serif Display", "Noto Sans TC", serif;
+  // ↓↓↓↓ 商城頁面 ↓↓↓↓ //
+  --size-default: 18px;
+  --size-sm: 18px;
+  --color-gold: #bbaf74;
+  --color-black: #000;
+  // ↓↓↓↓ 404頁面 ↓↓↓↓ //
+  --gold: #bbaf74;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+  // ----------------- //
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  line-height: 1;
+  background-color: #160c0c;
+  color: rgb(var(--foreground-rgb));
+  font-family: "DM Serif Display", "Noto Sans TC", serif;
+  // background: linear-gradient(
+  //     to bottom,
+  //     transparent,
+  //     rgb(var(--background-end-rgb))
+  //   )
+  //   rgb(var(--background-start-rgb));
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "DM Serif Display", "Noto Sans TC", serif;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+p,
+a,
+button,
+span,
+label {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Serif Display", "Noto Sans TC", sans-serif;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.fs-x-large {
+  font-size: 1.3rem !important;
+}
+
+.fs-large,
+.fs-md-large {
+  font-size: 1.22rem;
+}
+
+.fs-regular {
+  font-size: 1rem;
+}
+
+.fs-small,
+.notice * {
+  font-size: 0.78rem;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+i {
+  color: #bbaf74;
+}
+
+// 隱藏 input 預設樣式
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: none;
+  appearance: textfield;
+}
+
+// input[type="text"]::placeholder,
+// input[type="number"]::placeholder,
+// input[type="search"]::placeholder {
+//   color: #bbaf74;
+//   -moz-appearance: none;
+//   appearance: none;
+// }
+.dropdown-toggle {
+  background: transparent;
+  // backdrop-filter: blur(5px);
+}
+
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+a.dropdown-item:hover {
+  color: $light !important;
+  background-color: $primary;
+  text-shadow: 0 0 8px black;
+}
+
+ul.list li::before {
+  content: "◆ ";
+  padding-right: 0.2rem;
+}
+
+ul.list02 li::before {
+  content: "※ ";
+  padding-right: 0.2rem;
+}
+
+ul.list,
+ul.list02 {
+  list-style: none;
+  font-family: "DM Serif Display", "Noto Sans TC", sans-serif;
+}
+
+ul.list li,
+ul.list02 li {
+  text-indent: -1.1rem;
+  padding-left: 1.3rem;
+  padding-bottom: 0.2rem;
+  line-height: 1.5;
+  color: white;
+}
+
+a.link:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.nav-tabs {
+  height: 54px;
+  align-items: flex-end;
+  display: flex;
+}
+
+.nav-tabs .nav-item {
+  flex: 1;
+  align-items: flex-end;
+}
+
+.nav-tabs .nav-link {
+  background: $secondary;
+  border-bottom: 0;
+  margin-bottom: unset;
+  border-radius: 5px 5px 0 0 !important;
+  border: 1px $dark solid;
+  border-bottom: unset;
+  width: 100%;
+  line-height: 1.25;
+}
+
+.nav-tabs .nav-link.active {
+  height: 52px;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  border-bottom: none;
+  background: $primary;
+  color: $dark;
+  position: relative;
+}
+
+.modal-title {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-header .btn-close {
+  scale: 0.8;
+  position: absolute;
+  margin: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.modal-header .btn-close:hover {
+  scale: 0.9;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+// 按鈕
+/* ------------------
+  original btn version 
+------------------ */
+@-webkit-keyframes radialAnimation {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes radialAnimation {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button__horizontal,
+.button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+
+.button__horizontal::before,
+.button__vertical::before {
+  content: "";
+  position: absolute;
+  border: inherit;
+}
+
+.button__horizontal {
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid var(--bs-primary);
+  border-bottom: var(--border-size) solid var(--bs-primary);
+}
+
+.button__horizontal::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--vertical-offset) * -1);
+  right: calc(var(--vertical-offset) * -1);
+}
+
+.button__vertical {
+  --horizontal-offset: calc(var(--offset) * -1);
+  border-left: var(--border-size) solid var(--bs-primary);
+  border-right: var(--border-size) solid var(--bs-primary);
+}
+
+.button__vertical::before {
+  top: calc(var(--horizontal-offset) * -1);
+  bottom: calc(var(--horizontal-offset) * -1);
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+
+.btn {
+  --offset: 5.5px;
+  display: block;
+  position: relative;
+  // padding: 0.5rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) var(--bs-primary);
+  transition: 0.8s ease;
+}
+
+.btn-outline {
+  backdrop-filter: blur(5px);
+  color: var(--bs-primary);
+  --border-size: 1px;
+  width: 10rem;
+}
+
+.btn-secondary {
+  background: var(--bs-secondary);
+  color: var(--bs-primary);
+  --border-size: 1px;
+  width: 10rem;
+}
+
+.btn-primary {
+  background: var(--bs-primary);
+  --border-size: 1px;
+  width: 10rem;
+}
+
+.d-grid .btn-outline {
+  background: transparent;
+  color: var(--bs-primary);
+  --border-size: 1px;
+  width: 100%;
+}
+
+.d-grid .btn-secondary {
+  background: var(--bs-secondary);
+  color: var(--bs-primary);
+  --border-size: 1px;
+  width: 100%;
+}
+
+.d-grid .btn-primary {
+  background: var(--bs-primary);
+  --border-size: 1px;
+  width: 100%;
+}
+
+.btn:hover {
+  -webkit-animation: radialAnimation 2s ease-in-out infinite;
+  animation: radialAnimation 2s ease-in-out infinite;
+}
+
+.btn-outline:hover,
+.d-grid .btn-outline:hover {
+  background-image: radial-gradient(circle, var(--bs-danger), var(--bs-dark));
+}
+
+.btn-secondary:hover,
+.d-grid .btn-secondary:hover {
+  background-image: radial-gradient(circle, var(--bs-dark), transparent);
+}
+
+.btn-primary:hover,
+.d-grid .btn-primary:hover {
+  background-image: radial-gradient(circle, var(--bs-light), transparent);
+}
+
+.btn-outline:hover .button__horizontal,
+.btn-secondary:hover .button__horizontal,
+.btn-primary:hover .button__horizontal,
+.d-grid .btn-outline:hover .button__horizontal,
+.d-grid .btn-secondary:hover .button__horizontal,
+.d-grid .btn-primary:hover .button__horizontal {
+  transform: scaleX(0);
+}
+
+.btn-outline:hover .button__vertical,
+.btn-secondary:hover .button__vertical,
+.btn-primary:hover .button__vertical,
+.d-grid .btn-outline:hover .button__vertical,
+.d-grid .btn-secondary:hover .button__vertical,
+.d-grid .btn-primary:hover .button__vertical {
+  transform: scaleY(0);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover,
+.d-grid .btn-secondary:hover,
+.d-grid .btn-outline:hover,
+.btn:active.btn-secondary:hover,
+.btn:active.btn-outline:hover {
+  color: var(--bs-primary);
+}
+
+// button end
+
+.forPC-block {
+  display: block;
+}
+
+.forPC-flex {
+  display: flex;
+}
+
+.forPC-revert {
+  display: revert;
+}
+
+.forSP-block,
+.forSP-flex {
+  display: none;
+}
+
+.pagination span {
+  font-size: 0.875rem;
+  color: $primary;
+}
+
+.pagination .page-link:hover span {
+  color: $dark;
+}
+
+::selection {
+  background: #ddd195;
+  color: $secondary;
+}
+
+::-moz-selection {
+  background: #ddd195;
+  color: $secondary;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+@media screen and (max-width: 820px) {
+  .btn:active.btn-outline-primary,
+  .btn:hover.btn-outline-primary {
+    background-color: transparent;
+    color: var(--bs-primary);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .forPC-block,
+  .forPC-flex,
+  .forPC-revert {
+    display: none;
+  }
+
+  .forSP-block {
+    display: block;
+  }
+
+  .forSP-flex {
+    display: flex;
+  }
+
+  .nav-tabs.shop {
+    height: 80px;
+  }
+
+  .nav-tabs.shop .nav-link.active {
+    height: 62px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.banner {
+  background-image: url("/forum/dragon-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+// carousel related
+.slick-slide > div {
+  margin: 0 0.5rem;
+}
+
+.slick-arrow {
+  background-color: red;
+}
+
+// scroll bar
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, #bbaf74),
+    color-stop(0.58, #bbaf74),
+    color-stop(0.86, #bbaf74)
+  );
+}

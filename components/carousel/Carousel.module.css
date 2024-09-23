@@ -1,0 +1,96 @@
+.carouselContainer {
+  width: 270px;
+  position: absolute;
+  left: 5%;
+  z-index: 1000;
+  top: 15%;
+}
+
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+.text {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  left: 46%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prevArrow {
+  transform: translateY(-50%) rotate(90deg);
+  top: -5%;
+}
+
+.nextArrow {
+  top: 105%;
+  transform: translateY(-50%) rotate(-270deg);
+}
+
+@media (max-width: 378px) {
+  .carouselContainer {
+    width: 110px;
+    left: 5%;
+    top: 38%;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 379px) and (max-width: 414px) {
+  .carouselContainer {
+    width: 115px;
+    left: 5%;
+    top: 50%;
+  }
+
+
+  .image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1024px) {
+  .carouselContainer {
+    width: 155px;
+    left: 5%;
+    top: 40%;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1921px) {
+  .carouselContainer {
+    width: 175px;
+    left: 5%;
+    top: 36%;
+  }
+
+  .image {
+    width: 100%;
+  }
+}

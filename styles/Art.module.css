@@ -1,0 +1,274 @@
+.sectionBg {
+  background-image: url('/art-gallery/rocky-wall.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.sectionBg2 {
+  background-image: url('/art-gallery/package.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.counterImage {
+  background-image: url('/art-gallery/counter.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.magicCircleL {
+  position: absolute;
+  top: -10%;
+  left: -20%;
+  opacity: 0.7;
+  width: 700px;
+  height: 700px;
+  animation: rotate 20s linear infinite both;
+}
+
+.magicCircleR {
+  position: absolute;
+  top: -10%;
+  right: -20%;
+  opacity: 0.7;
+  width: 700px;
+  height: 700px;
+  animation: rotate1 20s linear infinite both;
+}
+
+/* rotate aniamtion */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* ranking cards */
+
+.content {
+  position: relative;
+  width: 180px;
+  height: 330px;
+  transform-style: preserve-3d;
+  animation: animate 40s linear infinite;
+}
+
+.content:hover {
+  animation-play-state: paused;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  /* 調整整體高度 */
+  top: 45%;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.3));
+
+}
+
+.c1 {
+  transform: rotateY(45deg) translatez(400px)
+}
+
+.c2 {
+  transform: rotateY(90deg) translatez(400px)
+}
+
+.c3 {
+  transform: rotateY(135deg) translatez(400px)
+}
+
+.c4 {
+  transform: rotateY(180deg) translatez(400px)
+}
+
+.c5 {
+  transform: rotateY(225deg) translatez(400px)
+}
+
+.c6 {
+  transform: rotateY(270deg) translatez(400px)
+}
+
+.c7 {
+  transform: rotateY(315deg) translatez(400px)
+}
+
+.c8 {
+  transform: rotateY(360deg) translatez(400px)
+}
+
+.rankImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+  border-radius: 2.5px;
+  box-shadow: 0 0 18px rgb(187, 175, 116);
+}
+
+.rankImg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgb(187, 175, 116);
+}
+
+.rankP {
+  color: rgb(187, 175, 116);
+  position: absolute;
+  left: 50%;
+  top: -45px;
+  transform: translateX(-50%);
+  padding: 10px;
+  box-shadow: 0 0 10px rgb(187, 175, 116);
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.rankSpan {
+  display: block;
+  font-size: 8px;
+
+}
+
+
+@keyframes animate {
+  0% {
+    transform: perspective(1500px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1500px) rotateY(-370deg);
+  }
+}
+
+/* ranking cards end*/
+
+/* vote-card start*/
+
+.vCard {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.vCard:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(46deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.vCard:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.vCard:hover .wrapper::after {
+  height: 120px;
+}
+
+.vTitle {
+  font-family: "DM Serif Display", "Noto Sans TC", serif;
+  background-color: transparent;
+  width: 100%;
+  color: rgb(187, 175, 116);
+  transition: transform 0.5s;
+  text-decoration: none;
+}
+
+.vCard:hover .vTitle {
+  transform: translate3d(0%, -75px, 100px);
+  background-color: transparent;
+  color: rgb(187, 175, 116);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.vCard:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+
+
+/* vote-card end */

@@ -1,0 +1,47 @@
+/* 自定義樣式 select 選單 */
+.customSelect {
+  position: relative;
+  width: 100%;
+  min-width: 240px;
+  height: 63px;
+  border: #BBAF74 1px solid;
+  background: #605541;
+  padding: 15px 15px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.customSelect::before{
+  content: url('../asset/icon/triangle-down.svg');
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 20;
+  right: 10px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.selectedOption {
+  /* font-size: 16px; */
+  color: #ffffff;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: #BBAF74 1px solid;
+  background: #605541;
+  z-index: 10;
+}
+
+.option {
+  padding: 10px 10px 10px 25px;
+}
+
+.option:hover {
+  color: #BBAF74;  
+}

@@ -1,0 +1,278 @@
+/* iPhone XR (414px * 896px) */
+/* iPad (1024px * 1366px) */
+/* PC (1920px * 1080px) */
+
+
+/* BEGIN NAV */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navList li {
+  margin-right: 20px;
+}
+
+.navList li:last-child {
+  margin-right: 0;
+}
+
+/* END NAV */
+
+/* BEGIN BANNER */
+.bannerSection {
+  display: flex;
+  /* min-height: 100%; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  background-image: url("/background/summer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* END BANNER */
+
+.art {
+  width: 100%;
+  height: 200px;
+  background-color: lightgray;
+}
+
+.heading {
+  text-align: center;
+}
+
+/* FORUM CARD */
+.forum {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/forum/bkg-1.jpg");
+}
+
+.forumContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.forumRow {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.forumCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  flex: 1 0 30%;
+  /* Flex property to ensure responsive layout */
+  box-sizing: border-box;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.cardPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s;
+}
+
+.cardBack {
+  display: flex;
+  background: #160c0c;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.card:hover .cardPhoto {
+  transform: rotateY(180deg);
+}
+
+.card:hover .cardBack {
+  transform: rotateY(0deg);
+}
+
+.cardHeading {
+  text-align: center;
+}
+
+/* FORUM CARD END  */
+
+.shopping {
+  width: 100%;
+  height: 500px;
+  background-color: lightblue;
+}
+
+/* BEGIN LIVE BUTTON */
+.floatingButton {
+  position: fixed;
+  right: 20px;
+  top: 57%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  width: 120px;
+}
+
+/* END LIVE BUTTON */
+
+/* Responsive Styles */
+@media (max-width: 414px) {
+  .nav {
+    padding: 5px 10px;
+  }
+
+  .navList li {
+    margin-right: 10px;
+  }
+
+  .art {
+    height: 150px;
+  }
+
+  .forumContainer {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .forumCard {
+    flex: 1 0 100%;
+  }
+
+  .shopping {
+    height: 300px;
+  }
+
+  .floatingButton {
+    right: 1%;
+    top: 57%;
+    height: 100vh;
+  }
+
+  /* END BANNER */
+}
+
+@media (min-width: 415px) and (max-width: 1024px) {
+  .nav {
+    padding: 8px 15px;
+  }
+
+  .navList li {
+    margin-right: 15px;
+  }
+
+  .art {
+    height: 180px;
+  }
+
+  .forumContainer {
+    width: 90%;
+  }
+
+  .forumCard {
+    flex: 1 0 45%;
+  }
+
+  .shopping {
+    height: 400px;
+  }
+
+  .bannerSection {
+    background-position: ;
+  }
+}
+
+@media (min-width: 1025px) {
+  .nav {
+    padding: 10px 20px;
+  }
+
+  .navList li {
+    margin-right: 20px;
+  }
+
+  .art {
+    height: 200px;
+  }
+
+  .forumContainer {
+    width: 960px;
+  }
+
+  .forumCard {
+    flex: 1 0 30%;
+  }
+
+  .shopping {
+    height: 500px;
+  }
+}

@@ -1,0 +1,251 @@
+#footer {
+  background-color: var(--bs-dark);
+  padding: 60px 30px 40px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: calc(50vh - 63px); */
+  box-shadow: 0 0 20px var(--bs-dark);
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#footer>div:nth-child(1), #footer>div:nth-child(3) {
+  flex: 1 0;
+  font-weight: normal;
+}
+
+#footer>div:nth-child(1) a, #footer>div:nth-child(3) p {
+  color: var(--bs-primary);
+}
+
+#footer>div:nth-child(1) a:hover, #footer>div:nth-child(2) a {
+  text-decoration: none;
+}
+
+#footer>div:nth-child(2) {
+  flex: 2 0;
+  /* font-size: 4rem; */
+  display: flex;
+  justify-content: center;
+}
+
+#footer>div:nth-child(3) {
+  /* flex: 1 0; */
+  display: flex;
+  /* justify-content: flex-end; */
+  flex-wrap: wrap;
+}
+
+#footer ul {
+  flex: 1 0;
+  /* font-size: 4rem; */
+}
+
+#footer li {
+  display: flex;
+  align-items: center;
+}
+
+#footer li a {
+  display: flex;
+  align-items: flex-end;
+}
+
+#footer li span:nth-child(2) {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  transition: 0.5s;
+}
+
+#footer li:hover span:nth-child(2) {
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+#footer li span {
+  color: var(--bs-primary);
+}
+
+#footer li:last-child span {
+  color: var(--bs-light);
+}
+
+#footer li .linkIcon {
+  align-items: center;
+  display: flex;
+  height: 0;
+  justify-content: center;
+  margin-right: .69444vw;
+  position: relative;
+  width: 0;
+  transition: 0.5s;
+  margin-bottom: 0;
+  margin-bottom: 0.8vw;
+}
+
+#footer li:hover .linkIcon {
+  background: var(--bs-primary);
+  align-items: center;
+  display: flex;
+  height: 1.71667vw;
+  justify-content: center;
+  margin-right: .69444vw;
+  position: relative;
+  width: 1.71667vw;
+  margin-left: 0.8vw;
+  -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transition: 0.5s;
+  margin-bottom: 0.3vw;
+}
+
+#footer li:last-child:hover .linkIcon {
+  background: var(--bs-light);
+}
+
+#footer li .linkIcon svg {
+  display: none;
+  transform: none;
+  color: var(--bs-dark);
+}
+
+#footer li:hover .linkIcon svg {
+  display: inline;
+}
+
+/* 旋轉 icon */
+@-webkit-keyframes rotate-90-cw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes rotate-90-cw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+.pulse {
+  color: var(--bs-primary);
+  transition: 0.25s;
+  background: none;
+  font: inherit;
+}
+
+.pulse:hover {
+  -webkit-animation: pulse 1s;
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--bs-primary);
+    ;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--bs-primary);
+    ;
+  }
+}
+
+
+
+/* ---------------------------
+            TAB 尺寸
+----------------------------- */
+@media screen and (max-width: 991px) {
+  #footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px 0;
+    height: fit-content;
+  }
+
+  #footer>div {
+    margin-bottom: 20px;
+  }
+
+  #footer li span:nth-child(2) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  #footer li:hover .linkIcon {
+    height: 3.51667vw;
+    width: 3.51667vw;
+    margin-bottom: 0.7vw;
+  }
+}
+
+/* ----------------------------
+              SP 尺寸
+------------------------------ */
+@media screen and (max-width: 768px) {
+  #footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px 0;
+    height: fit-content;
+  }
+
+  #footer>div {
+    margin-bottom: 20px;
+  }
+
+  #footer li span:nth-child(2) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  #footer li:hover .linkIcon {
+    height: 5.91667vw;
+    width: 5.91667vw;
+    margin-bottom: 1vw;
+  }
+}
